@@ -17,15 +17,13 @@ API REST desarrollada con Node.js, Express y MySQL que permite registrar e inici
 
 ### Inicializar el proyecto:
 
-````bash
-npm init -y
-```
+`npm init -y`
+
 ### dependencias principales
-```bash
-npm install express bcryptjs jsonwebtoken dotenv cors mysql2 joi morgan chalk clear
-npm install -D nodemon
-```
+
+`npm install express bcryptjs jsonwebtoken dotenv cors mysql2 joi morgan chalk clear`
+`npm install -D nodemon`
+
 ## ejecutar aplicacion
-```bash
-npm run dev
-````
+
+`npm run dev`

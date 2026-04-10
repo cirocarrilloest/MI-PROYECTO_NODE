@@ -27,16 +27,16 @@ git clone https://github.com/cirocarrilloest/MI-PROYECTO_NODE.git
 cd MI-PROYECTO_NODE
 ```
 
-### .env configuracion
-
-```bash
-cp .env.example .env
-```
-
 ### Inicializar el proyecto:
 
 ```bash
 npm init -y
+```
+
+### .env configuracion
+
+```bash
+cp .env.example .env
 ```
 
 ### Dependencias principales

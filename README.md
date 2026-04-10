@@ -20,6 +20,19 @@ API REST desarrollada con Node.js, Express y MySQL que permite registrar e inici
 
 ## Instalación de dependencias
 
+### clonar repositorio
+
+```bash
+git clone https://github.com/cirocarrilloest/MI-PROYECTO_NODE.git
+cd MI-PROYECTO_NODE
+```
+
+### .env configuracion
+
+```bash
+cp .env.example .env
+```
+
 ### Inicializar el proyecto:
 
 ```bash

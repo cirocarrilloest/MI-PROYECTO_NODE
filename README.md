@@ -13,7 +13,7 @@ API REST desarrollada con Node.js, Express y MySQL que permite registrar e inici
 - bcryptjs
 - Joi
 
-## 📦 Instalación de dependencias
+## Instalación de dependencias
 
 ### Inicializar el proyecto:
 
@@ -33,3 +33,30 @@ npm install -D nodemon
 ```bash
 npm run dev
 ```
+
+# Estrucutra del poyecto
+
+```
+MI-PROYECTO_NODE/
+└── src/
+    ├── config/
+    ├── controllers/
+    ├── middlewares/
+    ├── models/
+    ├── routes/
+    ├── app.js
+    └── server.js
+```
+
+# Documentacion Endpoints
+
+base URL backend: `http://localhost:3000`
+
+1. Registro exitoso
+
+2. Registro duplicado
+3. Login correcto
+4. Login incorrecto
+5. Acceso sin token
+6. Acceso con token inválido
+7. Acceso con token válido

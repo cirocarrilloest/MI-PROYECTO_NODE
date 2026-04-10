@@ -58,6 +58,8 @@ MI-PROYECTO_NODE/
 
 base URL backend: `http://localhost:3000`
 
+### Registro
+
 1. Registro exitoso
 
    `POST: http://localhost:3000/api/auth/registro`
@@ -107,6 +109,8 @@ base URL backend: `http://localhost:3000`
     "message": "el email ya esta registrado"
     }
    ```
+
+### ingreso
 
 3. Login correcto
 
@@ -158,6 +162,8 @@ base URL backend: `http://localhost:3000`
     "message": "Credenciales inválidas"
     }
    ```
+
+### acceso
 
 5. Acceso sin token
 

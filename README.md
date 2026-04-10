@@ -44,8 +44,9 @@ MI-PROYECTO_NODE/
     ├── middlewares/
     ├── models/
     ├── routes/
-    ├── app.js
-    └── server.js
+    ├── services/
+    ├── utils/
+    └── app.js
 ```
 
 # Documentacion Endpoints con postman

@@ -17,3 +17,6 @@ describe usuarios;
 
 -- vemos datos
 select * from usuarios;
+
+-- limpiar tabla de base de datos
+truncate table usuarios;

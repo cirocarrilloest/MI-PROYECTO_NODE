@@ -48,15 +48,42 @@ MI-PROYECTO_NODE/
     └── server.js
 ```
 
-# Documentacion Endpoints
+# Documentacion Endpoints con postman
 
 base URL backend: `http://localhost:3000`
 
 1. Registro exitoso
+   - `POST: http://localhost:3000/api/auth/registro`
+   - ejemplo:
+   ```bash
+   {
+   "nombre": "antonio",
+   "email": "antonio@gmail.com",
+   "pass": "123456"}
+   ```
 
+   - resultado:
+   ```bash
+    {
+    "ok": true,
+    "message": "Usuario registrado exitosamente",
+    "user": {
+        "id": 1,
+        "nombre": "antonio",
+        "email": "antonio@gmail.com",
+        "rol": "user"
+        }
+    }
+   ```
 2. Registro duplicado
+   - `POST: http://localhost:3000/api/auth/registro`
 3. Login correcto
+   - `POST: http://localhost:3000/api/auth/ingreso`
 4. Login incorrecto
+   - `POST: http://localhost:3000/api/auth/ingreso`
 5. Acceso sin token
+   - `GET: http://localhost:3000/api/auth/perfil`
 6. Acceso con token inválido
+   - `GET: http://localhost:3000/api/auth/perfil`
 7. Acceso con token válido
+   - `GET: http://localhost:3000/api/auth/perfil`

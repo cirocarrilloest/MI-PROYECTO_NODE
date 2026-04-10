@@ -2,7 +2,7 @@
 
 ## 📌 Descripción
 
-API REST desarrollada con Node.js, Express y MySQL que permite registrar e iniciar sesión de usuarios usando JWT. que se evalua con postman para comborbar el funcionamiento de los endpoints
+API REST desarrollada con Node.js, Express y MySQL que permite registrar e iniciar sesión de usuarios usando JWT que se evalua con postman para la seguridad del ingreso el ususario con clave cifrada
 
 ## 🚀 Tecnologías
 
@@ -53,8 +53,11 @@ MI-PROYECTO_NODE/
 base URL backend: `http://localhost:3000`
 
 1. Registro exitoso
-   - `POST: http://localhost:3000/api/auth/registro`
-   - ejemplo:
+
+   `POST: http://localhost:3000/api/auth/registro`
+
+   ejemplo:
+
    ```bash
    {
    "nombre": "antonio",
@@ -62,7 +65,8 @@ base URL backend: `http://localhost:3000`
    "pass": "123456"}
    ```
 
-   - resultado:
+   resultado:
+
    ```bash
     {
     "ok": true,
@@ -75,15 +79,120 @@ base URL backend: `http://localhost:3000`
         }
     }
    ```
+
 2. Registro duplicado
-   - `POST: http://localhost:3000/api/auth/registro`
+
+   `POST: http://localhost:3000/api/auth/registro`
+
+   ejemplo:
+
+   ```bash
+   {
+   "nombre": "antonio",
+   "email": "antonio@gmail.com",
+   "pass": "123456"}
+   ```
+
+   resultado:
+
+   ```bash
+    {
+    "ok": false,
+    "message": "el email ya esta registrado"
+    }
+   ```
+
 3. Login correcto
-   - `POST: http://localhost:3000/api/auth/ingreso`
+
+   `POST: http://localhost:3000/api/auth/ingreso`
+
+   ejemplo:
+
+   ```bash
+   {
+   "email": "antonio@gmail.com",
+   "pass": "123456"
+    }
+   ```
+
+   resultado:
+
+   ```bash
+    {
+    "ok": true,
+    "message": "Ingreso exitoso",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhbnRvbmlvQGdtYWlsLmNvbSIsInJvbCI6InVzZXIiLCJpYXQiOjE3NzU4MTE2OTksImV4cCI6MTc3NTgxNTI5OX0.d1-7c4OZLyt-dQHhiUmbNkqNlgnj4Cb4g8k4qdfhAy4",
+    "user": {
+        "id": 1,
+        "nombre": "antonio",
+        "email": "antonio@gmail.com",
+        "rol": "user"
+    }
+    }
+   ```
+
 4. Login incorrecto
-   - `POST: http://localhost:3000/api/auth/ingreso`
+
+   `POST: http://localhost:3000/api/auth/ingreso`
+
+   ejemplo:
+
+   ```bash
+   {
+   "email": "antonio@gmail.com",
+   "pass": "453456"
+    }
+   ```
+
+   resultado:
+
+   ```bash
+    {
+    "ok": false,
+    "message": "Credenciales inválidas"
+    }
+   ```
+
 5. Acceso sin token
-   - `GET: http://localhost:3000/api/auth/perfil`
+
+   `GET: http://localhost:3000/api/auth/perfil`
+
+   resultado:
+
+   ```bash
+    {
+    "ok": false,
+    "message": "no se proporcionó token de autenticación"
+    }
+   ```
+
 6. Acceso con token inválido
-   - `GET: http://localhost:3000/api/auth/perfil`
+
+   `GET: http://localhost:3000/api/auth/perfil`
+
+   resultado:
+
+   ```bash
+   {
+    "ok": false,
+    "message": "token invalido o expirado"
+    }
+   ```
+
 7. Acceso con token válido
-   - `GET: http://localhost:3000/api/auth/perfil`
+
+   `GET: http://localhost:3000/api/auth/perfil`
+
+   resultado:
+
+   ```bash
+    {
+    "ok": true,
+    "usuario": {
+        "id": 1,
+        "nombre": "antonio",
+        "email": "antonio@gmail.com",
+        "rol": "user"
+    }
+    }
+   ```

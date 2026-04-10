@@ -12,6 +12,11 @@ API REST desarrollada con Node.js, Express y MySQL que permite registrar e inici
 - JWT
 - bcryptjs
 - Joi
+- dotenv
+- cors
+- morgan
+- charl
+- clear
 
 ## Instalación de dependencias
 
